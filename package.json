@@ -2,7 +2,7 @@
   "name": "reward-claim",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://TWOJ_NICK.github.io/reward-claim",
+  "homepage": "https://sasanek12.github.io/reward-claim-react",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.12",
     "react": "^18.2.0",

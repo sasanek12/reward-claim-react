@@ -1,29 +1,22 @@
 import { useState } from "react";
-import twinky1 from "./assets/images/twinky1.jpg";
-import vampire1 from "./assets/images/vampire1.webp";
-import dog1 from "./assets/images/dog1.png";
-import twinky2 from "./assets/images/twinky2.jpg";
-import cat1 from "./assets/images/cat1.png";
-import vampire2 from "./assets/images/vampire2.jpg";
-import car from "./assets/images/car.jpg";
-import twinky3 from "./assets/images/twinky3.jpg";
-import vampire3 from "./assets/images/vampire3.jpg";
+import rewardImage from "./assets/images/reward.png";
 
 const images = [
-    { src: twinky1, isTarget: true },
-    { src: vampire1, isTarget: true },
-    { src: dog1, isTarget: false },
-    { src: twinky2, isTarget: true },
-    { src: cat1, isTarget: false },
-    { src: vampire2, isTarget: true },
-    { src: car, isTarget: false },
-    { src: twinky3, isTarget: true },
-    { src: vampire3, isTarget: true }
+    { src: "./assets/images/twinky1.jpg", isTarget: true },
+    { src: "./assets/images/vampire1.webp", isTarget: true },
+    { src: "./assets/images/dog1.png", isTarget: false },
+    { src: "./assets/images/twinky2.jpg", isTarget: true },
+    { src: "./assets/images/cat1.png", isTarget: false },
+    { src: "./assets/images/vampire2.jpg", isTarget: true },
+    { src: "./assets/images/car.jpg", isTarget: false },
+    { src: "./assets/images/twinky3.jpg", isTarget: true },
+    { src: "./assets/images/vampire3.jpg", isTarget: true }
 ];
 
 export default function App() {
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [selected, setSelected] = useState([]);
+    const [showReward, setShowReward] = useState(false);
 
     const toggleImage = (index) => {
         setSelected((prev) =>
@@ -34,11 +27,21 @@ export default function App() {
     const handleVerify = () => {
         const correctSelection = selected.every(index => images[index].isTarget);
         if (correctSelection && selected.length > 0) {
-            window.location.href = "/success";
+            setShowReward(true);
         } else {
             alert("Nieprawidłowa selekcja, spróbuj ponownie.");
         }
     };
+
+    if (showReward) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-500 to-green-800 text-white text-center p-6">
+                <img src={rewardImage} alt="Nagroda" className="w-full max-w-2xl rounded-lg shadow-xl" />
+                <h2 className="text-2xl font-bold mt-6">Ale to nie wszystko!</h2>
+                <p className="text-lg mt-2">Informacje wkrótce!</p>
+            </div>
+        );
+    }
 
     return (
         <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 p-6 text-white">
