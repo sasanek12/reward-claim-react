@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reward-claim-react/static/css/main.84be1c3b.css",
+    "main.js": "/reward-claim-react/static/js/main.392c4368.js",
+    "static/js/453.dcd1fa43.chunk.js": "/reward-claim-react/static/js/453.dcd1fa43.chunk.js",
+    "static/media/dog1.png": "/reward-claim-react/static/media/dog1.10d28b0869b145aeb6db.png",
+    "static/media/cat1.png": "/reward-claim-react/static/media/cat1.ab3a742332e080e9aedf.png",
+    "static/media/car.jpg": "/reward-claim-react/static/media/car.7ecb214fd49256a70b2c.jpg",
+    "static/media/vampire1.webp": "/reward-claim-react/static/media/vampire1.dcf73a55f81f8ddc6be7.webp",
+    "static/media/vampire3.jpg": "/reward-claim-react/static/media/vampire3.44a0946ff210302d1552.jpg",
+    "static/media/vampire2.jpg": "/reward-claim-react/static/media/vampire2.139c708575e56de3e7f6.jpg",
+    "static/media/twinky3.jpg": "/reward-claim-react/static/media/twinky3.c9a1a26bd743ef434250.jpg",
+    "static/media/twinky2.jpg": "/reward-claim-react/static/media/twinky2.2062e965202818627f27.jpg",
+    "index.html": "/reward-claim-react/index.html",
+    "main.84be1c3b.css.map": "/reward-claim-react/static/css/main.84be1c3b.css.map",
+    "main.392c4368.js.map": "/reward-claim-react/static/js/main.392c4368.js.map",
+    "453.dcd1fa43.chunk.js.map": "/reward-claim-react/static/js/453.dcd1fa43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84be1c3b.css",
+    "static/js/main.392c4368.js"
+  ]
+}
