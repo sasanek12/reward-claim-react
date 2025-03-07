@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/reward-claim-react/static/css/main.5c73614f.css",
-    "main.js": "/reward-claim-react/static/js/main.61f00989.js",
+    "main.js": "/reward-claim-react/static/js/main.701b8d53.js",
     "static/js/453.dcd1fa43.chunk.js": "/reward-claim-react/static/js/453.dcd1fa43.chunk.js",
     "static/media/reward.png": "/reward-claim-react/static/media/reward.09e0c9ec0f56ef96a044.png",
     "index.html": "/reward-claim-react/index.html",
     "main.5c73614f.css.map": "/reward-claim-react/static/css/main.5c73614f.css.map",
-    "main.61f00989.js.map": "/reward-claim-react/static/js/main.61f00989.js.map",
+    "main.701b8d53.js.map": "/reward-claim-react/static/js/main.701b8d53.js.map",
     "453.dcd1fa43.chunk.js.map": "/reward-claim-react/static/js/453.dcd1fa43.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c73614f.css",
-    "static/js/main.61f00989.js"
+    "static/js/main.701b8d53.js"
   ]
 }
