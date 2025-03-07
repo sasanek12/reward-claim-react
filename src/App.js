@@ -2,17 +2,28 @@ import { useState } from "react";
 import { HashRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import RewardPage from "./RewardPage"; // Strona z nagrodą
 
+import twinky1 from "./assets/images/twinky1.jpg";
+import vampire1 from "./assets/images/vampire1.webp";
+import dog1 from "./assets/images/dog1.png";
+import twinky2 from "./assets/images/twinky2.jpg";
+import cat1 from "./assets/images/cat1.png";
+import vampire2 from "./assets/images/vampire2.jpg";
+import car from "./assets/images/car.jpg";
+import twinky3 from "./assets/images/twinky3.jpg";
+import vampire3 from "./assets/images/vampire3.jpg";
+
 const images = [
-    { src: "./assets/images/twinky1.jpg", isTarget: true },
-    { src: "./assets/images/vampire1.webp", isTarget: true },
-    { src: "./assets/images/dog1.png", isTarget: false },
-    { src: "./assets/images/twinky2.jpg", isTarget: true },
-    { src: "./assets/images/cat1.png", isTarget: false },
-    { src: "./assets/images/vampire2.jpg", isTarget: true },
-    { src: "./assets/images/car.jpg", isTarget: false },
-    { src: "./assets/images/twinky3.jpg", isTarget: true },
-    { src: "./assets/images/vampire3.jpg", isTarget: true }
+    { src: twinky1, isTarget: true },
+    { src: vampire1, isTarget: true },
+    { src: dog1, isTarget: false },
+    { src: twinky2, isTarget: true },
+    { src: cat1, isTarget: false },
+    { src: vampire2, isTarget: true },
+    { src: car, isTarget: false },
+    { src: twinky3, isTarget: true },
+    { src: vampire3, isTarget: true }
 ];
+
 
 function CaptchaPage() {
     const [showCaptcha, setShowCaptcha] = useState(false);
