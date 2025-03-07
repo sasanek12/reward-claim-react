@@ -1,5 +1,6 @@
 import { useState } from "react";
-import rewardImage from "./assets/images/reward.png";
+import { HashRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import RewardPage from "./RewardPage"; // Strona z nagrodą
 
 const images = [
     { src: "./assets/images/twinky1.jpg", isTarget: true },
@@ -13,10 +14,10 @@ const images = [
     { src: "./assets/images/vampire3.jpg", isTarget: true }
 ];
 
-export default function App() {
+function CaptchaPage() {
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [selected, setSelected] = useState([]);
-    const [showReward, setShowReward] = useState(false);
+    const navigate = useNavigate();
 
     const toggleImage = (index) => {
         setSelected((prev) =>
@@ -27,21 +28,11 @@ export default function App() {
     const handleVerify = () => {
         const correctSelection = selected.every(index => images[index].isTarget);
         if (correctSelection && selected.length > 0) {
-            setShowReward(true);
+            navigate("/reward");
         } else {
             alert("Nieprawidłowa selekcja, spróbuj ponownie.");
         }
     };
-
-    if (showReward) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-500 to-green-800 text-white text-center p-6">
-                <img src={rewardImage} alt="Nagroda" className="w-full max-w-2xl rounded-lg shadow-xl" />
-                <h2 className="text-2xl font-bold mt-6">Ale to nie wszystko!</h2>
-                <p className="text-lg mt-2">Informacje wkrótce!</p>
-            </div>
-        );
-    }
 
     return (
         <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-blue-400 to-purple-600 p-6 text-white">
@@ -77,5 +68,16 @@ export default function App() {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<CaptchaPage />} />
+                <Route path="/reward" element={<RewardPage />} />
+            </Routes>
+        </Router>
     );
 }
